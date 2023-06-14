@@ -8,6 +8,7 @@
   // font-family: 'Helvetica Neue';
   &>.container {
     max-width         : 410px;
+    min-width         : 410px;
     height        : 686px;
     background    : #0D1119;
     padding       : 24px;
@@ -37,7 +38,7 @@
         color          : white;
         outline        : none;
       }
-      &>.dish-list-container {
+      &>.recipe-list-container {
         position: absolute;
         padding-left: 0;
         left: 24px;
@@ -45,6 +46,8 @@
         margin-top: 2px;
         background   : #1E202C;
         border-radius: 2px;
+        max-height: 400px;
+        overflow-y: auto;
         &>li {
           list-style-type: none;  
           cursor: pointer;
@@ -55,7 +58,7 @@
           }
         }
       }
-      .dish-list-container.hide {
+      .recipe-list-container.hide {
         display: none;
       }
     }
@@ -75,7 +78,7 @@
           height: 24px;
         }
 
-        &>.dish {
+        &>.recipe {
           display    : flex;
           font-size  : 14px;
           white-space: nowrap;

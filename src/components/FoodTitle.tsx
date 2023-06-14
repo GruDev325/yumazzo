@@ -10,7 +10,7 @@ export default function FoodTitle(props: {title: string}) {
         <div className="icons">
             <div className="flag">
                 <img src={Spain} alt="no" />
-                <div className="dish">{props.title}</div>
+                <div className="recipe">{props.title}</div>
             </div>
             <div className="socials">
                 <img src={twitter} alt="no" />

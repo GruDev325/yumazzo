@@ -11,9 +11,6 @@ export default function FoodDetail(props: {recipe: string, description: string})
           </div>
           <div className="content">
             <p>{props.description}</p>
-            <div className="view-btn">
-              View Full Recipe
-            </div>
           </div>
         </div>
       </div>

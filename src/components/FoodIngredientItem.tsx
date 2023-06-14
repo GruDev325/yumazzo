@@ -9,8 +9,12 @@ export default function FoodIngredientItem(props: Ingredient) {
                     ? (<div className={props.values[0].className}>{props.values[0].text}</div>)
                     : props.values.length === 2 ? (<div>
                         <span className={props.values[0].className}>{props.values[0].text}</span>
-                        &nbsp;/&nbsp;
-                        <span className={props.values[1].className}>{props.values[1].text}</span>
+                        {props.values[1].text ? (
+                            <>
+                                &nbsp;/&nbsp;
+                                <span className={props.values[1].className}>{props.values[1].text}</span>
+                            </>
+                        ) : null}
                     </div>)
                         : <div className="lower">&nbsp;</div>
             }
