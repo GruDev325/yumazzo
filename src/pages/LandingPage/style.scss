@@ -63,10 +63,11 @@
       }
     }
 
-    &>.icons {
+    &>.iconbar {
       display        : grid;
-      grid-auto-flow : column;
+      grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
+      align-items: center;
 
       &>.flag {
         display              : grid;
@@ -85,14 +86,40 @@
         }
       }
 
-      &>.socials {
-        display              : grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap                  : 5px;
-
-        img {
-          width : 24px;
+      &>.icon-btn-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        
+        &>.socials {
+          display              : grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap                  : 5px;
+  
+          img {
+            width : 24px;
+            height: 24px;
+          }        
+        }
+  
+        &>.btn-add {
+          display      : grid;
+          justify-items: center;
+          align-items  : center;
+          white-space  : nowrap;
+          padding: 0 7px 0 7px;
+          width: 89px;
           height: 24px;
+          font-weight: 400;
+          font-size: 13px;
+          background: #171F2F;
+          border-radius: 4px;
+          color        : white;
+          &:hover {
+            background: #313545;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -140,20 +167,7 @@
           line-height: 24px;
           line-height: 24px;
 
-          &>.view-btn {
-            display      : grid;
-            justify-items: center;
-            align-items  : center;
-            white-space  : nowrap;
-            background   : #5B6178;
-            color        : white;
-            border-radius: 6px;
-            height       : 40px;
-            &:hover {
-              background: #313545;
-              cursor: pointer;
-            }
-          }
+          
         }
       }
     }

@@ -14,6 +14,5 @@ export default function FoodDetail(props: {recipe: string, description: string})
           </div>
         </div>
       </div>
-
     )
 }
