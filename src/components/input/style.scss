@@ -1,0 +1,16 @@
+.custom-input {
+    background: #181F30;
+    padding: 8px 11px;
+    box-shadow: 0px 0px 0px 1px #5B6178;
+    border-radius: 6px;
+
+    input {
+        background: transparent;
+        border: none;
+        color: white;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

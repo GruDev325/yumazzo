@@ -19,9 +19,25 @@
 
         background: #0D1119;
         border-radius: 10px;
+
+        &>.test-border-bottom {
+            width: 100%;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #2E3347;
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            grid-auto-flow: column;
+            justify-content: left;
+        }
+
+        &>.test-00001 {
+            display: grid;
+            gap: 24px 12px;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
     }
 
-    &> hr {
-        max-width: 100%;
-    }
+
 }
