@@ -1,12 +1,12 @@
-import './style.scss';
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import FoodTitle from '../../components/FoodTitle';
 import FoodDetail from '../../components/FoodDetail';
 import Foodingredient from '../../components/FoodIngredient';
-import { DATA } from '../../const/const';
-import { DataObject, Recipe } from '../../const/type';
 import SearchBar from '../../components/SearchBar';
-import { useSelector } from 'react-redux';
+
+import './style.scss';
 
 const LandingPage = () => {
     const allRecipes: any[] = useSelector((state: any) => state.recipe.allRecipes);

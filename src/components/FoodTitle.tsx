@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Spain from '../img/spain.png';
 import M from '../img/M.png';
 import telegram from '../img/telegram.png';
@@ -6,6 +8,9 @@ import twitter from '../img/twitter.png';
 import world from '../img/world.png';
 
 export default function FoodTitle(props: { title: string }) {
+    const navigate = useNavigate();
+    const handleclick = () => navigate('/add');
+
     return (
         <div className="iconbar">
             <div className="flag">
@@ -18,7 +23,7 @@ export default function FoodTitle(props: { title: string }) {
                     <img src={telegram} alt="no" />
                     <img src={M} alt="no" />
                 </div>
-                <div className='btn-add'>+ Add Recipe</div>
+                <div className='btn-add'  onClick={handleclick}>+ Add Recipe</div>
             </div>
         </div>
     );

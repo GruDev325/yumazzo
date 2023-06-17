@@ -7,17 +7,16 @@
 
   // font-family: 'Helvetica Neue';
   &>.container {
-    max-width         : 410px;
-    min-width         : 410px;
-    height        : 686px;
-    background    : #0D1119;
-    padding       : 24px;
+    position: relative;
     display       : flex;
     flex-direction: column;
+    padding       : 24px;
     gap           : 20px;
+    max-width         : 410px;
+    min-width         : 410px;
+    height        : 630px;
+    background    : #0D1119;
     border-radius : 10px;
-    position: relative;
-
     &>.search {
       height: 40px;
 
