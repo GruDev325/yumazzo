@@ -1,0 +1,26 @@
+.custom-select-container {
+    display: grid;
+    gap: 10px;
+
+    .custom-textarea {
+        background: #181F30;
+        padding: 8px 11px;
+        box-shadow: 0px 0px 0px 1px #5B6178;
+        border-radius: 6px;
+
+        textarea {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &>.helper {
+        color: #43495E;
+    }
+}

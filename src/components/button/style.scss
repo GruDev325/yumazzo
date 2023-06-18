@@ -1,0 +1,13 @@
+.custom-button {
+    background: #764AF4;
+    padding: 9px 10px;
+    border-radius: 6px;
+    display: grid;
+    justify-content: center;
+    color: white;
+    height: 40px;
+
+    &.full {
+        width: 100%;
+    }
+}
