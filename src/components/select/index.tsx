@@ -1,18 +1,85 @@
+import ReactSelect, { components } from "react-select";
 import { WrapLabel } from "../wrap-label";
-import ReactSelect from "react-select";
 import "./style.scss";
-import { ChevronLeft } from "../../svg/chevron-left";
+import { SearchIcon } from "../../svg/search-icon";
+
 type Props = {
   label?: string;
-  options: { label: React.ReactNode; value: any }[];
+  isSearchable?: boolean;
+  hideIndicator?: boolean;
+  onChange?: (value: any) => void;
+  options: {
+    label: React.ReactNode;
+    chipLabel?: React.ReactNode;
+    value: any;
+    search?: any;
+  }[];
 };
 
-export const Select: React.FC<Props> = ({ label, options }) => {
+const MultiValue = (props: any) => (
+  <components.MultiValue {...props}>
+    {props.data.chipLabel}
+  </components.MultiValue>
+);
+
+const DropdownIndicator = (props: any) => {
+  return (
+    components.DropdownIndicator && (
+      <components.DropdownIndicator {...props}></components.DropdownIndicator>
+    )
+  );
+};
+
+const DropdownIndicatorSearch = (props: any) => {
+  return (
+    components.DropdownIndicator && (
+      <components.DropdownIndicator {...props}>
+        <SearchIcon />
+      </components.DropdownIndicator>
+    )
+  );
+};
+
+const CrossIcon = (props: any) => {
+  return (
+    components.DropdownIndicator && (
+      <components.DropdownIndicator {...props}>
+        <SearchIcon />
+      </components.DropdownIndicator>
+    )
+  );
+};
+
+export const Select: React.FC<Props> = ({
+  label,
+  options,
+  isSearchable,
+  hideIndicator,
+  onChange,
+}) => {
   return (
     <WrapLabel label={label}>
       <div className="custom-select">
         <ReactSelect
+          onChange={onChange}
           options={options}
+          components={{
+            MultiValue,
+            DropdownIndicator: hideIndicator
+              ? null
+              : isSearchable
+              ? DropdownIndicatorSearch
+              : DropdownIndicator,
+            CrossIcon,
+            IndicatorSeparator: () => null,
+          }}
+          isSearchable={isSearchable}
+          getOptionLabel={(option) => option.search}
+          formatOptionLabel={(option, { context }) => {
+            return context === "menu"
+              ? option.label
+              : option.chipLabel || option.label;
+          }}
           styles={{
             container: (baseStyles, state) => ({
               ...baseStyles,
@@ -21,7 +88,10 @@ export const Select: React.FC<Props> = ({ label, options }) => {
             control: (baseStyles, state) => ({
               ...baseStyles,
               background: "transparent",
-              border: "none",
+              boxShadow: state.isFocused
+                ? "0px 0px 0px 4px #B89FFF, inset 0px 0px 0px 1px #663CDD;"
+                : "0px 0px 0px 1px #5B6178",
+              flexDirection: isSearchable ? "row-reverse" : "row",
             }),
             singleValue: (baseStyles, state) => ({
               ...baseStyles,
@@ -34,6 +104,9 @@ export const Select: React.FC<Props> = ({ label, options }) => {
             option: (baseStyles, state) => ({
               ...baseStyles,
               color: "white",
+              "&:hover": {
+                background: "#181F30",
+              },
             }),
           }}
         />

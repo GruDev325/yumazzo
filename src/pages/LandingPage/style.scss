@@ -5,68 +5,62 @@
   height         : 100vh;
   color          : white;
 
+  .recipe-select-item {
+    display        : grid;
+    justify-content: space-between;
+    align-items    : center;
+    grid-auto-flow : column;
+
+    &>.country {
+      display       : grid;
+      gap           : 6px;
+      grid-auto-flow: column;
+      align-items   : center;
+
+      img {
+        width : 24px;
+        height: 24px;
+      }
+    }
+
+    &>.info {
+      display       : grid;
+      gap           : 10px;
+      grid-auto-flow: column;
+      align-items   : center;
+
+      &>.volume {
+        color: #AEB5C1;
+      }
+
+      &>.divider {
+        width           : 1px;
+        background-color: #1F2A44;
+        height          : 100%;
+      }
+    }
+  }
+
   // font-family: 'Helvetica Neue';
   &>.container {
-    position: relative;
+    position      : relative;
     display       : flex;
     flex-direction: column;
     padding       : 24px;
     gap           : 20px;
-    max-width         : 410px;
-    min-width         : 410px;
+    max-width     : 410px;
+    min-width     : 410px;
     height        : 630px;
     background    : #0D1119;
     border-radius : 10px;
-    &>.search {
-      height: 40px;
 
-      input {
-        display        : flex;
-        flex-direction : row;
-        justify-content: space-between;
-        align-items    : center;
-        padding        : 8px 11px;
-        gap            : 10px;
-        border         : 1px solid #5B6178;
-        width          : -webkit-fill-available;
-        background     : #131823;
-        border-radius  : 6px;
-        font-weight    : 400;
-        font-size      : 16px;
-        line-height    : 24px;
-        color          : white;
-        outline        : none;
-      }
-      &>.recipe-list-container {
-        position: absolute;
-        padding-left: 0;
-        left: 24px;
-        right: 24px;
-        margin-top: 2px;
-        background   : #1E202C;
-        border-radius: 2px;
-        max-height: 400px;
-        overflow-y: auto;
-        &>li {
-          list-style-type: none;  
-          cursor: pointer;
-          padding: 8px 24px;
-          &:hover {
-            background: #313545;
-            cursor: pointer;
-          }
-        }
-      }
-      .recipe-list-container.hide {
-        display: none;
-      }
-    }
+
 
     &>.iconbar {
-      display        : grid;
+      display              : grid;
       grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-      align-items: center;
+      justify-content      : space-between;
+      align-items          : center;
 
       &>.flag {
         display              : grid;
@@ -86,38 +80,39 @@
       }
 
       &>.icon-btn-group {
-        display: grid;
+        display              : grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-content: space-between;
-        align-items: center;
-        
+        justify-content      : space-between;
+        align-items          : center;
+
         &>.socials {
           display              : grid;
           grid-template-columns: repeat(3, 1fr);
           gap                  : 5px;
-  
+
           img {
             width : 24px;
             height: 24px;
-          }        
+          }
         }
-  
+
         &>.btn-add {
           display      : grid;
           justify-items: center;
           align-items  : center;
           white-space  : nowrap;
-          padding: 0 7px 0 7px;
-          width: 89px;
-          height: 24px;
-          font-weight: 400;
-          font-size: 13px;
-          background: #171F2F;
+          padding      : 0 7px 0 7px;
+          width        : 89px;
+          height       : 24px;
+          font-weight  : 400;
+          font-size    : 13px;
+          background   : #171F2F;
           border-radius: 4px;
           color        : white;
+
           &:hover {
             background: #313545;
-            cursor: pointer;
+            cursor    : pointer;
           }
         }
       }
@@ -132,7 +127,6 @@
       &>.body {
         display      : grid;
         padding      : 20px;
-        background   : #17CFC4;
         border-radius: 6px;
 
         &>.header {
@@ -149,10 +143,10 @@
             display      : grid;
             align-items  : center;
             justify-items: left;
-            color: #1E202C;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 24px;
+            color        : #1E202C;
+            font-weight  : 700;
+            font-size    : 18px;
+            line-height  : 24px;
             font-size    : 20px;
             white-space  : nowrap;
           }
@@ -162,11 +156,11 @@
           text-align : left;
           color      : #1E202C;
           font-weight: 400;
-          font-size: 16px;
+          font-size  : 16px;
           line-height: 24px;
           line-height: 24px;
 
-          
+
         }
       }
     }
@@ -194,9 +188,9 @@
             display      : grid;
             align-items  : center;
             justify-items: left;
-            color:#737992;
+            color        : #737992;
             font-size    : 13px;
-            line-height: 24px;
+            line-height  : 24px;
             white-space  : nowrap;
           }
 
@@ -204,36 +198,39 @@
             display      : grid;
             align-items  : center;
             justify-items: left;
-            color: #FFFFFF;
-            font-weight: 500;
+            color        : #FFFFFF;
+            font-weight  : 500;
             font-size    : 16px;
-            line-height: 19.54px;
+            line-height  : 19.54px;
             white-space  : nowrap;
           }
+
           .sunfire {
-            font-weight: 500;
-            font-size    : 16px;
-            line-height: 19.54px;
-            background: linear-gradient(136.39deg, #FFBF43 3.18%, #FF4869 102.04%);
+            font-weight            : 500;
+            font-size              : 16px;
+            line-height            : 19.54px;
+            background             : linear-gradient(136.39deg, #FFBF43 3.18%, #FF4869 102.04%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            background-clip        : text;
           }
+
           .foliage {
-            font-weight: 500;
-            font-size    : 16px;
-            line-height: 19.54px;
-            background: linear-gradient(136.39deg, #2BF1E5 3.18%, #40E33D 102.04%);
+            font-weight            : 500;
+            font-size              : 16px;
+            line-height            : 19.54px;
+            background             : linear-gradient(136.39deg, #2BF1E5 3.18%, #40E33D 102.04%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            background-clip        : text;
           }
+
           .red {
-            color: red;
+            color      : red;
             font-weight: 500;
-            font-size    : 16px;
+            font-size  : 16px;
             line-height: 19.54px;
-            white-space  : nowrap;
+            white-space: nowrap;
           }
         }
       }

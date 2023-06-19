@@ -1,10 +1,9 @@
 .custom-select {
-    background: #181F30;
-    box-shadow: 0px 0px 0px 1px #5B6178;
+    background   : #181F30;
     border-radius: 6px;
-    display: grid;
-    gap: 8px;
-    align-items: center;
+    display      : grid;
+    gap          : 8px;
+    align-items  : center;
 
     &>.icon {
         transform: rotateZ(90deg);

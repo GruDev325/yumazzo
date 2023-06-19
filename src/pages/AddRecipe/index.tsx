@@ -1,15 +1,10 @@
-import React from "react";
-
-import "./style.scss";
 import { ChevronLeft } from "../../svg/chevron-left";
 import { Input } from "../../components/input";
 import { Select } from "../../components/select";
 import { TextArea } from "../../components/text-area";
 import { Button } from "../../components/button";
 
-const style: React.CSSProperties = {
-  backgroundColor: "red",
-};
+import "./style.scss";
 
 const AddRecipe = () => {
   return (
