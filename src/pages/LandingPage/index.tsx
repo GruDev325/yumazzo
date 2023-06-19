@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 
-import Foodingredient from "../../components/FoodIngredient";
+import { FoodIngredient } from "../../components/food-ingredient";
 import { FoodTitle } from "../../components/food-title";
 
 import { Select } from "../../components/select";
@@ -82,7 +82,7 @@ const LandingPage = () => {
           difficulty={allRecipes[selectedIndex].difficulty}
         />
 
-        <Foodingredient items={allRecipes[selectedIndex].ingredient} />
+        <FoodIngredient items={allRecipes[selectedIndex].ingredient} />
       </div>
     </div>
   );

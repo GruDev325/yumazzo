@@ -1,7 +1,7 @@
 import ReactSelect, { components } from "react-select";
 import { WrapLabel } from "../wrap-label";
 import "./style.scss";
-import { SearchIcon } from "../../svg/search-icon";
+import { SearchIcon } from "../../svg/icon-search";
 
 type Props = {
   label?: string;

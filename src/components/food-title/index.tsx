@@ -1,14 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Spain from "../../img/spain.png";
-import M from "../../img/M.png";
-import telegram from "../../img/telegram.png";
-import twitter from "../../img/twitter.png";
-import world from "../../img/world.png";
-import { Select } from "../select";
-import { ChevronLeft } from "../../svg/chevron-left";
-
+import { MediumIcon } from "../../svg/icon-medium";
+import { TelegramIcon } from "../../svg/icon-telegram";
+import { TwitterIcon } from "../../svg/icon-twitter";
 import "./style.scss";
 
 type Props = { title: string; origin: string };
@@ -25,9 +20,9 @@ export const FoodTitle: React.FC<Props> = ({ title, origin }) => {
       </div>
       <div className="icon-btn-group">
         <div className="socials">
-          <img src={twitter} alt="no" />
-          <img src={telegram} alt="no" />
-          <img src={M} alt="no" />
+          <TwitterIcon />
+          <TelegramIcon />
+          <MediumIcon />
         </div>
         <div className="btn-add" onClick={handleclick}>
           + Add Recipe

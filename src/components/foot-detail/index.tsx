@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import Paella from "../../img/paella.png";
+import { PaellaImg } from "../../svg/img-paella";
 
 type Props = {
   recipe: string;
@@ -27,7 +27,7 @@ export const FoodDetail: React.FC<Props> = (props) => {
         }}
       >
         <div className="header">
-          <img src={Paella} alt="no" />
+          <PaellaImg />
           <div className="title">{props.recipe}</div>
         </div>
         <div className="content">
