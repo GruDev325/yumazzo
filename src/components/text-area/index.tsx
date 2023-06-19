@@ -18,6 +18,7 @@ export const TextArea: React.FC<Props> = ({ label, placeholder, ...props }) => {
   useEffect(() => {
     props.onChange && props.onChange(value);
   }, [value]);
+
   return (
     <WrapLabel label={label}>
       <div className="custom-select-container">

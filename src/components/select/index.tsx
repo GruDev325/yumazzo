@@ -3,17 +3,20 @@ import { WrapLabel } from "../wrap-label";
 import "./style.scss";
 import { SearchIcon } from "../../svg/icon-search";
 
+type Item = {
+  label: React.ReactNode;
+  chipLabel?: React.ReactNode;
+  value: any;
+  search?: any;
+};
+
 type Props = {
   label?: string;
+  value?: Item;
   isSearchable?: boolean;
   hideIndicator?: boolean;
   onChange?: (value: any) => void;
-  options: {
-    label: React.ReactNode;
-    chipLabel?: React.ReactNode;
-    value: any;
-    search?: any;
-  }[];
+  options: Item[];
 };
 
 const MultiValue = (props: any) => (
@@ -52,6 +55,7 @@ const CrossIcon = (props: any) => {
 
 export const Select: React.FC<Props> = ({
   label,
+  value,
   options,
   isSearchable,
   hideIndicator,
@@ -63,6 +67,7 @@ export const Select: React.FC<Props> = ({
         <ReactSelect
           onChange={onChange}
           options={options}
+          value={value}
           components={{
             MultiValue,
             DropdownIndicator: hideIndicator

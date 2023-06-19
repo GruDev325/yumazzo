@@ -21,6 +21,6 @@ export const recipeSlice = createSlice({
     },
 })
 
-export const { setAllRecipes } = recipeSlice.actions
+export const { setAllRecipes, addRecipe } = recipeSlice.actions
 
 export default recipeSlice.reducer
