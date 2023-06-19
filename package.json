@@ -2,6 +2,7 @@
   "name": "foodex",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
